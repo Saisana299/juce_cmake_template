@@ -8,12 +8,22 @@
   "configurePresets": [
     {
       "name": "vs2022",
-      "displayName": "Visual Studio 17 2022",
+      "displayName": "Visual Studio 2022",
+      "description": "VS 2022 output to build directory",
       "generator": "Visual Studio 17 2022",
-      "binaryDir": "${sourceDir}/build",
-      "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Release"
-      }
+      "binaryDir": "${sourceDir}/build"
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "vs2022-release",
+      "configurePreset": "vs2022",
+      "configuration": "Release"
+    },
+    {
+      "name": "vs2022-debug",
+      "configurePreset": "vs2022",
+      "configuration": "Debug"
     }
   ]
 }

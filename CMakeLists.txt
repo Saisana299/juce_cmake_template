@@ -34,7 +34,6 @@ target_compile_definitions(NewProject
 target_link_libraries(NewProject
     PRIVATE
         juce::juce_audio_utils
-    PUBLIC
         juce::juce_recommended_config_flags
         juce::juce_recommended_lto_flags
         juce::juce_recommended_warning_flags)
